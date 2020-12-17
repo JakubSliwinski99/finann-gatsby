@@ -1,0 +1,115 @@
+.about {
+    text-align: center;
+    color: #1D3557;
+    background-color: #F7F7F7;
+
+}
+
+.about h3 {
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.about h3:after {
+    content: "";
+    border-top: 2px solid #1D3557;
+    width: 40px;
+    padding-bottom: 4px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.about h3:before {
+    content: "";
+    border-top: 2px solid #1D3557; 
+    width: 40px;
+    padding-bottom: 4px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.about h2 {
+    font-size: 2rem;
+    width: 80vw;
+    margin-bottom: 4rem;
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+
+.about p {
+    width: 70vw;
+    margin-bottom: 3rem;
+    margin-right: 15vw;
+    margin-left: 15vw;
+}
+
+.about p:last-child {
+    margin-bottom: 6rem;
+}
+
+.bookBackground {
+    background-image: url('../images/book-background.jpg');
+    height: 350px;
+    background-size: 100%; //drugie 100%
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.7;
+}
+
+//Shape Dividers ------------------------------------------
+
+.shapeDividerTop {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background: none;
+}
+
+.shapeDividerTop svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 79px;
+    transform: rotateY(180deg);
+    background: none;
+}
+
+.shapeDividerTop .shapeFill {
+    fill: #F7F7F7;
+    background: none;
+}
+
+//-----------------------
+
+.shapeDividerBottom {
+    position: relative;
+    top: 193px;
+    //bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    background: none;
+}
+
+.shapeDividerBottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 79px;
+    transform: rotateY(180deg);
+    background: none;
+}
+
+.shapeDividerBottom .shapeFill {
+    fill: #F7F7F7;
+    background: none;
+}
+
+
+
+
