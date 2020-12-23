@@ -1,20 +1,57 @@
 import React from "react"
 import '../styles/index.scss'
 import FormStyle from './form.module.scss'
+import { navigate } from 'gatsby-link'
+
+function encode(data) {
+    return Object.keys(data)
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
 
 const FormPage = () => {
+    const [state, setState] = React.useState({})
+
+    const handleChange = (e) => {
+      setState({ ...state, [e.target.name]: e.target.value })
+    }
+  
+    const handleSubmit = (e) => {
+      e.preventDefault()
+      const form = e.target
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': form.getAttribute('name'),
+          ...state,
+        }),
+      })
+        .then(() => navigate(form.getAttribute('action')))
+        .catch((error) => alert(error))
+    }
+
     return(
         <section className={FormStyle.style} id="contact">
             <div  className={FormStyle.backgroundStyle}>
             <div className={FormStyle.bgColor}></div>
             <div className={FormStyle.container}>
                 <h2>KONTAKT</h2>
-                <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" className={FormStyle.form}>
+                <form 
+                name="contact" method="post" action="/thanks/" //WAŻŃE -- dopisać stronę thx
+                data-netlify="true" data-netlify-honeypot="bot-field" 
+                onSubmit={handleSubmit} className={FormStyle.form}>
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p hidden>
+                        <label>
+                            Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+                        </label>
+                    </p>
                     <div className={FormStyle.part}>
                         <div className={FormStyle.item}>
-                            <input type="text" name="fname" placeholder="Nazwa firmy" className={FormStyle.inputStyle}></input>
-                            <input type="text" name="fname" placeholder="Adres e-mail" className={FormStyle.inputStyle}></input>
-                            <input type="text" name="fname" placeholder="Telefon" className={FormStyle.inputStyle}></input>
+                            <input type="text" placeholder="Nazwa firmy" name="name" className={FormStyle.inputStyle}></input>
+                            <input type="email" placeholder="Adres e-mail" name="email" className={FormStyle.inputStyle}></input>
+                            <input type="text" placeholder="Telefon" name="phone" className={FormStyle.inputStyle}></input>
                         </div>
                         <div className={FormStyle.item, FormStyle.itemText}>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -27,12 +64,12 @@ const FormPage = () => {
                         </div>
                     </div>
                     <div className={FormStyle.item}>
-                        <input type="text" name="fname" placeholder="Pytanie" className={FormStyle.inputStyleBig}></input>
+                        <textarea placeholder="Pytanie" name="message" className={FormStyle.inputStyleBig}></textarea>
+                    </div>
+                    <div className={FormStyle.buttonDiv}>
+                        <button type="submit" className={FormStyle.buttonStyle}>ZGŁOŚ SIĘ</button>
                     </div>
                 </form>
-                <div className={FormStyle.buttonDiv}>
-                <button type="submit" className={FormStyle.buttonStyle}>ZGŁOŚ SIĘ</button>
-                </div>
             </div>
             </div>
         </section>
