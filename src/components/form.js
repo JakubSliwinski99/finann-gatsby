@@ -9,7 +9,7 @@ const FormPage = () => {
             <div className={FormStyle.bgColor}></div>
             <div className={FormStyle.container}>
                 <h2>KONTAKT</h2>
-                <form className={FormStyle.form}>
+                <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" className={FormStyle.form}>
                     <div className={FormStyle.part}>
                         <div className={FormStyle.item}>
                             <input type="text" name="fname" placeholder="Nazwa firmy" className={FormStyle.inputStyle}></input>

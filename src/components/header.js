@@ -3,10 +3,12 @@ import '../styles/index.scss'
 import HeaderStyles from './header.module.scss'
 
 
-const checkWork = () => {
-  console.log("XXXXXX");
-  alert("adca");
-}
+
+// const menuCheck = <input type="checkbox" className={HeaderStyles.toggler} id="toggler"></input>;
+
+// const checkWork = () => {
+//   alert("asda")
+// }
 
 const Header = () => {
   return (
@@ -16,7 +18,7 @@ const Header = () => {
         <input type="checkbox" className={HeaderStyles.toggler} id="toggler"></input>
         <div className={HeaderStyles.hamburger}><div></div></div>
         <ul>
-          <li><a href="#about" onClick={checkWork}>O firmie</a></li>
+          <li><a href="#about">O firmie</a></li>
           <li><a href="#offer">Oferta</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
