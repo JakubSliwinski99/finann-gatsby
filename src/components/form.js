@@ -49,9 +49,9 @@ const FormPage = () => {
                     </p>
                     <div className={FormStyle.part}>
                         <div className={FormStyle.item}>
-                            <input type="text" placeholder="Nazwa firmy" name="name" className={FormStyle.inputStyle}></input>
-                            <input type="email" placeholder="Adres e-mail" name="email" className={FormStyle.inputStyle}></input>
-                            <input type="text" placeholder="Telefon" name="phone" className={FormStyle.inputStyle}></input>
+                            <input type="text" placeholder="Nazwa firmy" name="name" className={FormStyle.inputStyle} onChange={handleChange}></input>
+                            <input type="email" placeholder="Adres e-mail" name="email" className={FormStyle.inputStyle} onChange={handleChange}></input>
+                            <input type="text" placeholder="Telefon" name="phone" className={FormStyle.inputStyle} onChange={handleChange}></input>
                         </div>
                         <div className={FormStyle.item, FormStyle.itemText}>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -64,7 +64,7 @@ const FormPage = () => {
                         </div>
                     </div>
                     <div className={FormStyle.item}>
-                        <textarea placeholder="Pytanie" name="message" className={FormStyle.inputStyleBig}></textarea>
+                        <textarea placeholder="Pytanie" name="message" className={FormStyle.inputStyleBig} onChange={handleChange}></textarea>
                     </div>
                     <div className={FormStyle.buttonDiv}>
                         <button type="submit" className={FormStyle.buttonStyle}>ZGŁOŚ SIĘ</button>
