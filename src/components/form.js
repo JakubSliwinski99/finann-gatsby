@@ -38,7 +38,7 @@ const FormPage = () => {
             <div className={FormStyle.container}>
                 <h2>KONTAKT</h2>
                 <form 
-                name="contact" method="post" action="/thanks/" //WAŻŃE -- dopisać stronę thx
+                name="contact" method="post" action="/thanks/" //WAŻNE -- dopisać stronę thx
                 data-netlify="true" data-netlify-honeypot="bot-field" 
                 onSubmit={handleSubmit} className={FormStyle.form}>
                     <input type="hidden" name="form-name" value="contact" />
