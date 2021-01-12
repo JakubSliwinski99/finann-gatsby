@@ -38,9 +38,10 @@
 
 .about p {
     width: 70vw;
+    max-width: 800px;
     margin-bottom: 3rem;
-    margin-right: 15vw;
-    margin-left: 15vw;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .about p:last-child {

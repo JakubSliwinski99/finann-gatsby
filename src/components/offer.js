@@ -4,6 +4,7 @@ import OfferStyle from './offer.module.scss'
 import IconBooks from '../icons/001-books.svg'
 import IconGroup from '../icons/002-group.svg'
 import IconNotebook from '../icons/003-notebook.svg'
+import IconCalendar from '../icons/004-calendar.svg'
 
 const Offer = () => {
     return(
@@ -35,6 +36,14 @@ const Offer = () => {
                     <p>
                         Biuro świadczy również usługi dla osób, które wybrały jako formę 
                         Rozliczeń, ryczałt ewidencjonowany lub kartę podatkową.
+                    </p>
+                </div>
+                <div className={OfferStyle.offerElement}>
+                    <img src={IconCalendar} />
+                    <h2>Rozliczenia roczne</h2>
+                    <p>
+                        Dokonujemy rozliczeń rocznych dla osób fizycznych nie prowadzących
+                        działalności gospodarczej, jak również dla małych i średnich firm.
                     </p>
                 </div>
             </div>
