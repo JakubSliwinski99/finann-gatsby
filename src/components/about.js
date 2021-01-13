@@ -12,7 +12,7 @@ const About = () => {
                 <h2>Nasza firma działa na lokalnym rynku od 2014 roku.</h2>
                 <p>
                     Podstawowym obszarem działalności biura jest kompleksowa obsługa małych i
-                    średnich firm w zakresie usług podatkowych, księgowych, rozliczenia z ZUS oraz
+                    średnich firm w zakresie usług podatkowych, księgowych, rozliczeń z ZUS oraz
                     prowadzenie spraw pracowniczych (kadrowo-płacowych). Udzielamy wsparcia na
                     wszystkich etapach prowadzenia działalności gospodarczej.
                 </p>
@@ -26,7 +26,7 @@ const About = () => {
                 <p>
                     Do obsługi finansowej wykorzystujemy najnowocześniejsze oprogramowanie, dzięki czemu
                     zapewniamy poufność przechowywanych danych i poprawność wykonywanych obliczeń,
-                    dokonywanych w zgodzie z obowiązującymi przepisami.
+                    dokonywanych w zgodzie <br/> z obowiązującymi przepisami.
                 </p>
             </section> 
             <div className={AboutStyle.bookBackground}>

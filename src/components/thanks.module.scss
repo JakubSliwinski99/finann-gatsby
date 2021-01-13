@@ -22,4 +22,11 @@
     letter-spacing: 3px;
     border: 2px solid #D52837;
     border-radius: 3px;
+    transition-timing-function: ease-in-out;
+    transition: 0.4s;
+    outline: none;
+}
+
+.buttonStyle:hover {
+    transform: scale(1.1);
 }

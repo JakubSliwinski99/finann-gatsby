@@ -16,12 +16,12 @@ render () {
   return (
     <header>
       <div className={HeaderStyles.header}>
-        FINN - ANN
+        FIN - ANN
         <input type="checkbox" className={HeaderStyles.toggler} id="toggler" onClick={this.toggleMenuVisible}></input>
         <div className={HeaderStyles.hamburger}><div></div></div>
         <ul>
-          <li><a href="#about" onClick={this.check}>O firmie</a></li>
-          <li><a href="#offer" onClick={this.toggleMenuVisible}>Oferta</a></li>
+          <li><a href="#about">O firmie</a></li>
+          <li><a href="#offer">Oferta</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
         <div style={{visibility: this.state.menuVisible ? "visible" : "hidden"}} className={HeaderStyles.pageMenu} id="pageMenu">

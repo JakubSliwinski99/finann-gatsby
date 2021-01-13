@@ -1,5 +1,5 @@
 .footer {
-    height: 100px;
+    min-height: 100px;
     background-color: #222222;
     padding: 20px;
 }
@@ -9,4 +9,15 @@
     padding-top: auto;
     padding-bottom: auto;
     background: none;
+    line-height: 1.5rem;
+}
+
+.iconsCredit {
+    background: none;
+}
+
+.iconsCredit a{
+    text-decoration: none;
+    background: none;
+    color: #FFFFFF;
 }

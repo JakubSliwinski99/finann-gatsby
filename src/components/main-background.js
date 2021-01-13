@@ -8,12 +8,11 @@ const Background = () => {
             <div className={BGstyles.bgimage}>
                 <div className={BGstyles.bgcolor}></div>
                 <div className={BGstyles.pageTitle}>
-                   <h2>Biuro Rachukowe <br />Fin - Ann </h2>
-                   <p>od 2014 roku dostarczamy profesjonale usługi księgowe oraz kadrowo-
-                        płacowe dla małych i średnich firm. Do skorzystania z naszych usług
-                        zapraszamy klientów z Krakowa i okolic. Zapewniamy indywidualne podejście
-                        oraz elastyczną ofertę usług, którą każdorazowo dopasowujemy do potrzeb
-                        każdej firmy.
+                   <h2>Biuro Rachukowe <br />FIN - ANN </h2>
+                   <p>Od 2014 roku dostarczamy profesjonale usługi księgowe oraz kadrowo-
+                        płacowe dla małych i średnich firm. Zapewniamy indywidualne podejście
+                        oraz elastyczną ofertę usług, którą każdorazowo dopasowujemy <br/> do potrzeb
+                        naszych Klientów.
                    </p>
                </div>
             </div>
